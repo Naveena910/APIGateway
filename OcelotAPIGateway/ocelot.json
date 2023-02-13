@@ -1,0 +1,178 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5159
+        }
+      ],
+      "UpstreamPathTemplate": "/user",
+      "UpstreamHttpMethod": ["GET","POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/user/interservice/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5159
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user/interservice/{userId}",
+      "UpstreamHttpMethod": ["GET","POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/user/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5159
+        }
+      ],
+      "UpstreamPathTemplate": "/login",
+      "UpstreamHttpMethod": ["POST"]
+    },
+    
+    {
+      "DownstreamPathTemplate": "/api/user/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5159
+        }
+      ],
+      "UpstreamPathTemplate": "/user/{id}",
+      "UpstreamHttpMethod": ["GET","PUT","DELETE"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/address/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5159
+        }
+      ],
+      "UpstreamPathTemplate": "/address/{userId}",
+      "UpstreamHttpMethod": ["GET","POST","DELETE"]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/address/{userId}/{addressId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5159
+        }
+      ],
+      "UpstreamPathTemplate": "/address/{userId}/{addressId}",
+      "UpstreamHttpMethod": ["GET","PUT","DELETE"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/payment/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5159
+        }
+      ],
+      "UpstreamPathTemplate": "/payment/{userId}",
+      "UpstreamHttpMethod": ["GET","POST","DELETE"]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/payment/{userId}/{addressId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5159
+        }
+      ],
+      "UpstreamPathTemplate": "/payment/{userId}/{addressId}",
+      "UpstreamHttpMethod": ["GET","PUT","DELETE"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/products",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5288
+        }
+      ],
+      "UpstreamPathTemplate": "/products",
+      "UpstreamHttpMethod": ["GET","POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/products/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5288
+        }
+      ],
+      "UpstreamPathTemplate": "/products/{id}",
+      "UpstreamHttpMethod": ["GET","PUT","DELETE"]
+    },
+    {
+      "DownstreamPathTemplate": "api/cart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5288
+        }
+      ],
+      "UpstreamPathTemplate": "/cart",
+      "UpstreamHttpMethod": ["GET","POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/cart/{productId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5288
+        }
+      ],
+      "UpstreamPathTemplate": "/cart/{productId}",
+      "UpstreamHttpMethod": ["PUT","DELETE"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/wishlist",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5288
+        }
+      ],
+      "UpstreamPathTemplate": "/wishlist",
+      "UpstreamHttpMethod": ["GET","POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/wishlist/{productId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5288
+        }
+      ],
+      "UpstreamPathTemplate": "/wishlist/{productId}",
+      "UpstreamHttpMethod": ["PUT","DELETE"]
+    }
+  ],
+  "GlobalConfiguration":{
+    "BaseUrl":"http://localhost:5170"
+  }
+}
